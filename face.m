@@ -14,11 +14,11 @@ FDetect = vision.CascadeObjectDetector;
 
 %%now integrating video into this
 
-camlist= webcamlist;
-cam=webcam(1);
-preview(cam);
-I= snapshot(cam);
-%I = imread('face.jpg'); 
+%camlist= webcamlist;
+%cam=webcam(1);
+%preview(cam);
+%I= snapshot(cam);
+I = imread('bill.jpg'); 
 
 %Returns Bounding Box values based on number of objects
 %counts the no of objects and returns bounding box around it

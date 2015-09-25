@@ -44,7 +44,6 @@ while(vid.FramesAcquired<=200)
     hold on
     
     
-    file=fopen('data.txt','w');
     %This is a loop to bound the red objects in a rectangular box.
     for object = 1:length(stats)
         bb = stats(object).BoundingBox;
@@ -53,11 +52,12 @@ while(vid.FramesAcquired<=200)
         plot(bc(1),bc(2), '-m+')
         xlabel(bc(1));
         ylabel(bc(2));
+        sprintf('I am dere');
         if(bc(1)<500)
-                fprintf(file,'move left');
+                sprintf('move left');
         else
             if(bc(1)>900)
-                  fprintf(file,'move right');
+                  sprintf('move right');
             end
         end
                   
@@ -78,4 +78,5 @@ flushdata(vid);
 
 % Clear all variables
 clear all
+delete(imaqfind);
 sprintf('%s','That was all about Image tracking, Guess that was pretty easy :) ')
